@@ -10,6 +10,9 @@ let appName = "ListApp"
 
 let project = Project(
     name: appName,
+    packages: [
+        .remote(url: "https://github.com/SnapKit/SnapKit.git", requirement: .upToNextMajor(from: "5.0.1"))
+    ],
     targets: [
         Target(
             name: appName,
@@ -18,7 +21,8 @@ let project = Project(
             bundleId: "com.justbug.listapp",
             infoPlist: .extendingDefault(with: infoPlist),
             sources: ["Sources/**"],
-            resources: ["Resources/**"]
+            resources: ["Resources/**"],
+            dependencies: [.package(product: "SnapKit")]
         ),
         Target(name: "\(appName)UnitTests",
                platform: .iOS,
