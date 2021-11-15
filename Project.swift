@@ -1,6 +1,11 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
 
+let infoPlist: [String: InfoPlist.Value] = [
+    "UIMainStoryboardFile": "",
+    "UILaunchStoryboardName": "LaunchScreen"
+]
+
 let project = Project(
     name: "ListApp",
     targets: [
@@ -9,7 +14,7 @@ let project = Project(
             platform: .iOS,
             product: .app,
             bundleId: "com.justbug.listapp",
-            infoPlist: .default,
+            infoPlist: .extendingDefault(with: infoPlist),
             sources: ["Sources/**"],
             resources: ["Resources/**"]
         )
