@@ -6,10 +6,18 @@
 //
 
 import UIKit
+import SnapKit
 
 class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let label = UILabel()
+        view.backgroundColor = .white
+        label.text = "Hi SnapKit"
+        view.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+        }
     }
 }
