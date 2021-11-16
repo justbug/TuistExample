@@ -7,6 +7,6 @@
 
 import UIKit
 
-class NiceView: UIView {
+public class NiceView: UIView {
     
 }

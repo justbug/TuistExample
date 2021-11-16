@@ -21,7 +21,10 @@ let project = Project(
             bundleId: "com.justbug.listapp",
             infoPlist: .extendingDefault(with: infoPlist),
             sources: [.init(.relativeToManifest("Sources/**"))],
-            dependencies: [.package(product: "SnapKit")]
+            dependencies: [
+                .package(product: "SnapKit"),
+                .project(target: "ListAppUIKit", path: .relativeToManifest("../ListAppUIKit"))
+            ]
         ),
         Target(name: "\(appName)UnitTests",
                platform: .iOS,

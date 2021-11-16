@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import ListAppUIKit
 
 class ListViewController: UIViewController {
 
@@ -19,5 +20,6 @@ class ListViewController: UIViewController {
         label.snp.makeConstraints { make in
             make.centerX.centerY.equalToSuperview()
         }
+        _ = NiceView()
     }
 }
