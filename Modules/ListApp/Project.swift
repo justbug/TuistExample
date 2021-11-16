@@ -20,8 +20,7 @@ let project = Project(
             product: .app,
             bundleId: "com.justbug.listapp",
             infoPlist: .extendingDefault(with: infoPlist),
-            sources: ["Sources/**"],
-            resources: ["Resources/**"],
+            sources: [.init(.relativeToManifest("Sources/**"))],
             dependencies: [.package(product: "SnapKit")]
         ),
         Target(name: "\(appName)UnitTests",
@@ -29,8 +28,7 @@ let project = Project(
                product: .unitTests,
                bundleId: "com.justbug.\(appName)UnitTests",
                infoPlist: .default,
-               sources: ["UnitTests/*.swift"],
-               resources: [],
+               sources: [.init(.relativeToManifest("UnitTests/*.swift"))],
                dependencies: [.target(name: appName)])
     ]
 )
