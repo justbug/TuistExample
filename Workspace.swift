@@ -4,7 +4,7 @@ let workspace = Workspace(
     projects: [
         "Modules/ListApp",
         "Modules/ListAppUIKit",
-        "Modules/Network",
+        "Modules/Networking",
         "Modules/Image"
     ]
 )

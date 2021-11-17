@@ -20,7 +20,7 @@ let project = Project(
             sources: [.init(.relativeToManifest("Sources/**"))],
             dependencies: [
                 .project(target: "ListAppUIKit", path: .relativeToManifest("../ListAppUIKit")),
-                .project(target: "Network", path: .relativeToManifest("../Network")),
+                .project(target: "Networking", path: .relativeToManifest("../Networking")),
                 .project(target: "Image", path: .relativeToManifest("../Image"))
             ]
         ),

@@ -7,7 +7,7 @@
 
 import ProjectDescription
 
-let appName = "Network"
+let appName = "Networking"
 
 let project = Project(
     name: appName,
@@ -19,7 +19,7 @@ let project = Project(
             name: appName,
             platform: .iOS,
             product: .framework,
-            bundleId: "com.justbug.listapp.network",
+            bundleId: "com.justbug.listapp.networking",
             infoPlist: .default,
             sources: [.init(.relativeToManifest("Sources/**"))],
             dependencies: [.package(product: "Alamofire")]
