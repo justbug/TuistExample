@@ -8,6 +8,8 @@
 import UIKit
 import SnapKit
 import ListAppUIKit
+import Network
+import Image
 
 class ListViewController: UIViewController {
 
@@ -21,5 +23,9 @@ class ListViewController: UIViewController {
             make.centerX.centerY.equalToSuperview()
         }
         _ = NiceView()
+        Service.instance.foo()
+        
+        let bar = ImageLoader()
+        bar.foo()
     }
 }

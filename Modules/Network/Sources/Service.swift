@@ -7,8 +7,10 @@
 
 import Alamofire
 
-final class Service {
-    static func foo() {
+public final class Service {
+    public static let instance = Service()
+    
+    public func foo() {
         AF.request("url")
     }
 }
