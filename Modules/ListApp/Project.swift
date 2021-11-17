@@ -19,7 +19,9 @@ let project = Project(
             infoPlist: .extendingDefault(with: infoPlist),
             sources: [.init(.relativeToManifest("Sources/**"))],
             dependencies: [
-                .project(target: "ListAppUIKit", path: .relativeToManifest("../ListAppUIKit"))
+                .project(target: "ListAppUIKit", path: .relativeToManifest("../ListAppUIKit")),
+                .project(target: "Network", path: .relativeToManifest("../Network")),
+                .project(target: "Image", path: .relativeToManifest("../Image"))
             ]
         ),
         Target(name: "\(appName)UnitTests",
